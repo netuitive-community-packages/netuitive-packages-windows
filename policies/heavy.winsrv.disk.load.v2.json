@@ -1,0 +1,35 @@
+{
+  "policy" : {
+    "id" : null,
+    "name" : "Heavy WINSRV Disk Load v2",
+    "description" : null,
+    "scope" : {
+      "elementName" : "",
+      "elementType" : "WINSRV",
+      "elementTags" : { }
+    },
+    "duration" : 900,
+    "conditions" : [ {
+      "metric" : "physical_disk._Total.avg_queue_length",
+      "wildcard" : null,
+      "analytic" : "baselineDeviation",
+      "operator" : ">",
+      "level" : null
+    }, {
+      "metric" : "physical_disk._Total.avg_queue_length",
+      "wildcard" : null,
+      "analytic" : "contextualDeviation",
+      "operator" : ">",
+      "level" : null
+    } ],
+    "actions" : [ {
+      "type" : "event",
+      "category" : 2
+    } ],
+    "enabled" : false,
+    "deleted" : false,
+    "originTenantId" : null,
+    "originPolicyId" : null,
+    "lastUpdated" : null
+  }
+}

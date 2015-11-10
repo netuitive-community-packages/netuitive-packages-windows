@@ -1,0 +1,47 @@
+{
+  "policy" : {
+    "id" : null,
+    "name" : "Elevated WINSRV Disk Latency",
+    "description" : null,
+    "scope" : {
+      "elementName" : "",
+      "elementType" : "WINSRV",
+      "elementTags" : { }
+    },
+    "duration" : 900,
+    "conditions" : [ {
+      "metric" : "physical_disk._Total.avg_sec_per_read",
+      "wildcard" : null,
+      "analytic" : "baselineDeviation",
+      "operator" : ">",
+      "level" : null
+    }, {
+      "metric" : "physical_disk._Total.avg_sec_per_read",
+      "wildcard" : null,
+      "analytic" : "contextualDeviation",
+      "operator" : ">",
+      "level" : null
+    }, {
+      "metric" : "physical_disk._Total.avg_sec_per_write",
+      "wildcard" : null,
+      "analytic" : "baselineDeviation",
+      "operator" : ">",
+      "level" : 2.0
+    }, {
+      "metric" : "physical_disk._Total.avg_sec_per_write",
+      "wildcard" : null,
+      "analytic" : "contextualDeviation",
+      "operator" : ">",
+      "level" : null
+    } ],
+    "actions" : [ {
+      "type" : "event",
+      "category" : 2
+    } ],
+    "enabled" : false,
+    "deleted" : false,
+    "originTenantId" : null,
+    "originPolicyId" : null,
+    "lastUpdated" : null
+  }
+}

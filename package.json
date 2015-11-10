@@ -1,0 +1,44 @@
+{
+  "id" : "netuitive.packages.windows",
+  "version" : "1.0.0",
+  "manifest" : {
+    "name" : "Netuitive Packages Windows",
+    "description" : "A set of Netuitive analytics configurations, polices, dashboards and reports that are used to monitor Windows performance",
+    "author" : {
+      "name" : null,
+      "email" : null
+    },
+    "distro" : {
+      "logo" : "http://assets.app.netuitive.com/pkg/logo/netuitive/banner_logo.png",
+      "download" : null
+    },
+    "compatibility" : [ "WINDOWS" ],
+    "tags" : [ ],
+    "checksum" : null
+  },
+  "policies" : [ {
+    "data" : {
+      "file" : "policies/elevated.winsrv.disk.latency.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "policies/elevated.winsrv.memory.utilization.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "policies/heavy.winsrv.cpu.load.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "policies/heavy.winsrv.disk.load.v2.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  } ]
+}
