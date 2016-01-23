@@ -2,7 +2,7 @@
   "policy" : {
     "id" : null,
     "name" : "Elevated WINSRV Memory Utilization",
-    "description" : null,
+    "description" : "This policy will generate a WARNING event when memory utilization on the Windows server is higher than expected.",
     "scope" : {
       "elementName" : "",
       "elementType" : "WINSRV",
@@ -26,7 +26,7 @@
       "type" : "event",
       "category" : 2
     } ],
-    "enabled" : false,
+    "enabled" : true,
     "deleted" : false,
     "originTenantId" : null,
     "originPolicyId" : null,

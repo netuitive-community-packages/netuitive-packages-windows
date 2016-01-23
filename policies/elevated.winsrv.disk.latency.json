@@ -2,7 +2,7 @@
   "policy" : {
     "id" : null,
     "name" : "Elevated WINSRV Disk Latency",
-    "description" : null,
+    "description" : "This policy will generate a WARNING event when both disk read and write times are higher than their expected baselines.",
     "scope" : {
       "elementName" : "",
       "elementType" : "WINSRV",
@@ -26,7 +26,7 @@
       "wildcard" : null,
       "analytic" : "baselineDeviation",
       "operator" : ">",
-      "level" : 2.0
+      "level" : null
     }, {
       "metric" : "physical_disk._Total.avg_sec_per_write",
       "wildcard" : null,
@@ -38,7 +38,7 @@
       "type" : "event",
       "category" : 2
     } ],
-    "enabled" : false,
+    "enabled" : true,
     "deleted" : false,
     "originTenantId" : null,
     "originPolicyId" : null,

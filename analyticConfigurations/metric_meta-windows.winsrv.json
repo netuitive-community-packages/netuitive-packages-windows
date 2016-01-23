@@ -1,0 +1,61 @@
+{
+  "analyticConfiguration" : {
+    "tenantId" : null,
+    "type" : "METRIC_META",
+    "id" : null,
+    "packageId" : null,
+    "name" : "Windows WINSRV",
+    "scope" : {
+      "elementName" : null,
+      "elementType" : "WINSRV",
+      "elementTags" : null
+    },
+    "metrics" : [ {
+      "match" : "network_interface.*\\.packets_outbound_errors",
+      "properties" : {
+        "STATISTIC" : "sum"
+      }
+    }, {
+      "match" : "network_interface.*\\.packets_received_errors",
+      "properties" : {
+        "STATISTIC" : "sum"
+      }
+    }, {
+      "match" : "processor._Total.percent_processor_time",
+      "properties" : {
+        "tags" : {
+          "utilization" : true
+        }
+      }
+    }, {
+      "match" : "netuitive.winsrv.memory.utilizationpercent",
+      "properties" : {
+        "tags" : {
+          "utilization" : true
+        }
+      }
+    }, {
+      "match" : ".*percent.*",
+      "properties" : {
+        "validMax" : 100
+      }
+    }, {
+      "match" : "netuitive.winsrv.network_interface.*\\.utilizationpercent",
+      "properties" : {
+        "tags" : {
+          "utilization" : true
+        }
+      }
+    }, {
+      "match" : "netuitive.winsrv.network_interface\\..*\\.packets_total",
+      "properties" : {
+        "STATISTIC" : "sum"
+      }
+    }, {
+      "match" : "netuitive.winsrv.network_interface\\..*\\.packets_total_errors",
+      "properties" : {
+        "STATISTIC" : "sum"
+      }
+    } ]
+  }
+}

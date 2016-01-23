@@ -2,7 +2,7 @@
   "policy" : {
     "id" : null,
     "name" : "Heavy WINSRV CPU Load",
-    "description" : null,
+    "description" : "High CPU values by themselves are not always a good indicator of a server being under heavy load. This policy looks for upper deviations not only in CPU, but in run queue size (system.processor_queue_length) and context switches as well. Taken together, upper deviations in all three of these key metrics are a good indication of an overloaded server.",
     "scope" : {
       "elementName" : "",
       "elementType" : "WINSRV",
@@ -10,25 +10,25 @@
     },
     "duration" : 900,
     "conditions" : [ {
-      "metric" : "processor._Total.percent_processor_time",
+      "metric" : "system.processor_queue_length",
       "wildcard" : null,
       "analytic" : "baselineDeviation",
       "operator" : ">",
       "level" : null
     }, {
-      "metric" : "processor._Total.percent_processor_time",
+      "metric" : "system.processor_queue_length",
       "wildcard" : null,
       "analytic" : "contextualDeviation",
       "operator" : ">",
       "level" : null
     }, {
-      "metric" : "system.processor_queue_length",
+      "metric" : "processor._Total.percent_processor_time",
       "wildcard" : null,
       "analytic" : "baselineDeviation",
       "operator" : ">",
       "level" : null
     }, {
-      "metric" : "system.processor_queue_length",
+      "metric" : "processor._Total.percent_processor_time",
       "wildcard" : null,
       "analytic" : "contextualDeviation",
       "operator" : ">",
@@ -50,7 +50,7 @@
       "type" : "event",
       "category" : 3
     } ],
-    "enabled" : false,
+    "enabled" : true,
     "deleted" : false,
     "originTenantId" : null,
     "originPolicyId" : null,

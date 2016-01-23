@@ -1,8 +1,8 @@
 {
   "policy" : {
     "id" : null,
-    "name" : "Heavy WINSRV Disk Load v2",
-    "description" : null,
+    "name" : "Heavy WINSRV Disk Load",
+    "description" : "This policy will generate a WARNING event if the average disk queue length for the server is higher than expected, indicating a potential problem with heavy disk load.",
     "scope" : {
       "elementName" : "",
       "elementType" : "WINSRV",
@@ -26,7 +26,7 @@
       "type" : "event",
       "category" : 2
     } ],
-    "enabled" : false,
+    "enabled" : true,
     "deleted" : false,
     "originTenantId" : null,
     "originPolicyId" : null,
