@@ -1,7 +1,7 @@
 {
   "policy" : {
     "id" : null,
-    "name" : "Elevated WINSRV Disk Latency",
+    "name" : "Windows - Elevated Disk Latency",
     "description" : "This policy will generate a WARNING event when both disk read and write times are higher than their expected baselines.",
     "scope" : {
       "elementName" : "",

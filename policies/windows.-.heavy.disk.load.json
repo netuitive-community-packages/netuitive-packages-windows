@@ -1,22 +1,22 @@
 {
   "policy" : {
     "id" : null,
-    "name" : "Elevated WINSRV Memory Utilization",
-    "description" : "This policy will generate a WARNING event when memory utilization on the Windows server is higher than expected.",
+    "name" : "Windows - Heavy Disk Load",
+    "description" : "This policy will generate a WARNING event if the average disk queue length for the server is higher than expected, indicating a potential problem with heavy disk load.",
     "scope" : {
       "elementName" : "",
       "elementType" : "WINSRV",
       "elementTags" : { }
     },
-    "duration" : 600,
+    "duration" : 900,
     "conditions" : [ {
-      "metric" : "netuitive.winsrv.memory.utilizationpercent",
+      "metric" : "physical_disk._Total.avg_queue_length",
       "wildcard" : null,
       "analytic" : "baselineDeviation",
       "operator" : ">",
       "level" : null
     }, {
-      "metric" : "netuitive.winsrv.memory.utilizationpercent",
+      "metric" : "physical_disk._Total.avg_queue_length",
       "wildcard" : null,
       "analytic" : "contextualDeviation",
       "operator" : ">",

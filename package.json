@@ -18,25 +18,25 @@
   },
   "policies" : [ {
     "data" : {
-      "file" : "policies/elevated.winsrv.disk.latency.json",
+      "file" : "policies/windows.-.elevated.disk.latency.json",
       "encoding" : "application/json",
       "content" : null
     }
   }, {
     "data" : {
-      "file" : "policies/elevated.winsrv.memory.utilization.json",
+      "file" : "policies/windows.-.elevated.memory.utilization.json",
       "encoding" : "application/json",
       "content" : null
     }
   }, {
     "data" : {
-      "file" : "policies/heavy.winsrv.cpu.load.json",
+      "file" : "policies/windows.-.heavy.cpu.load.json",
       "encoding" : "application/json",
       "content" : null
     }
   }, {
     "data" : {
-      "file" : "policies/heavy.winsrv.disk.load.json",
+      "file" : "policies/windows.-.heavy.disk.load.json",
       "encoding" : "application/json",
       "content" : null
     }
