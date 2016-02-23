@@ -1,6 +1,6 @@
 {
   "id" : "netuitive.packages.windows",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "manifest" : {
     "name" : "Netuitive Packages Windows",
     "description" : "A set of Netuitive analytics configurations, polices, dashboards, and reports that are used to monitor performance of the Windows OS.",
@@ -49,7 +49,7 @@
     }
   }, {
     "data" : {
-      "file" : "analyticConfigurations/computed_metric-aws.ec2.json",
+      "file" : "analyticConfigurations/computed_metric-windows.winsrv.json",
       "encoding" : "application/json",
       "content" : null
     }
@@ -60,5 +60,11 @@
       "content" : null
     }
   } ],
-  "dashboards" : [ ]
+  "dashboards" : [ {
+    "data" : {
+      "file" : "dashboards/windows.summary.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  } ]
 }
