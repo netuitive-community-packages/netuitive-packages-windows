@@ -278,7 +278,7 @@
       "created" : "2016-03-16T21:35:48Z",
       "updated" : "2016-03-16T21:35:48Z"
     } ],
-    "type" : "WINDOWS",
+    "type" : "WINSRV",
     "private" : false
   }
 }
