@@ -14,25 +14,37 @@
       "wildcard" : null,
       "analytic" : "baselineDeviation",
       "operator" : ">",
-      "level" : null
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
     }, {
       "metric" : "physical_disk._Total.avg_sec_per_read",
       "wildcard" : null,
       "analytic" : "contextualDeviation",
       "operator" : ">",
-      "level" : null
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
     }, {
       "metric" : "physical_disk._Total.avg_sec_per_write",
       "wildcard" : null,
       "analytic" : "baselineDeviation",
       "operator" : ">",
-      "level" : null
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
     }, {
       "metric" : "physical_disk._Total.avg_sec_per_write",
       "wildcard" : null,
       "analytic" : "contextualDeviation",
       "operator" : ">",
-      "level" : null
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
     } ],
     "actions" : [ {
       "type" : "event",
