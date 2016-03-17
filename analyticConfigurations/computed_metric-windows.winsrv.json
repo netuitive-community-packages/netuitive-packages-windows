@@ -39,13 +39,6 @@
         "fqn" : "netuitive.winsrv.network_interface.${1}.utilizationpercent"
       }
     }, {
-      "match" : "netuitive.winsrv.memory.utilizationpercent",
-      "properties" : {
-        "expression" : "Math.min(100, (attribute['ram'].value == 0 ? 0 : ((attribute['ram'].value - data['memory.available_bytes'].actual) / attribute['ram'].value) * 100))",
-        "fqn" : "netuitive.winsrv.memory.utilizationpercent",
-        "name" : "Memory Utilization Percent"
-      }
-    }, {
       "match" : "netuitive.winsrv.memory.unavailable_bytes",
       "properties" : {
         "expression" : "(attribute['ram bytes'] == null || attribute['ram bytes'].value == 0) ? ((attribute['ram'] == null || attribute['ram'].value == 0) ? 0 : (attribute['ram'].value - data['memory.available_bytes'].actual)) : (attribute['ram bytes'].value - data['memory.available_bytes'].actual)",
