@@ -14,37 +14,55 @@
       "wildcard" : null,
       "analytic" : "baselineDeviation",
       "operator" : ">",
-      "level" : null
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
     }, {
       "metric" : "system.processor_queue_length",
       "wildcard" : null,
       "analytic" : "contextualDeviation",
       "operator" : ">",
-      "level" : null
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
     }, {
       "metric" : "processor._Total.percent_processor_time",
       "wildcard" : null,
       "analytic" : "baselineDeviation",
       "operator" : ">",
-      "level" : null
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
     }, {
       "metric" : "processor._Total.percent_processor_time",
       "wildcard" : null,
       "analytic" : "contextualDeviation",
       "operator" : ">",
-      "level" : null
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
     }, {
       "metric" : "system.context_switches_per_sec",
       "wildcard" : null,
       "analytic" : "baselineDeviation",
       "operator" : ">",
-      "level" : null
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
     }, {
       "metric" : "system.context_switches_per_sec",
       "wildcard" : null,
       "analytic" : "contextualDeviation",
       "operator" : ">",
-      "level" : null
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
     } ],
     "actions" : [ {
       "type" : "event",

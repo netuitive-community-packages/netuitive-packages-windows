@@ -14,13 +14,19 @@
       "wildcard" : null,
       "analytic" : "baselineDeviation",
       "operator" : ">",
-      "level" : null
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
     }, {
       "metric" : "netuitive.winsrv.memory.utilizationpercent",
       "wildcard" : null,
       "analytic" : "contextualDeviation",
       "operator" : ">",
-      "level" : null
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
     } ],
     "actions" : [ {
       "type" : "event",
