@@ -1,6 +1,11 @@
-#netuitive.packages.windows 1.2.0
+#netuitive.packages.windows 1.3.0
 
 ##Release History
+
+###Version 1.3.0
+
+* Added metric units.
+* Added memory and disk utilization metrics.
 
 ###Version 1.2.0
 
