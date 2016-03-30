@@ -35,11 +35,6 @@
         }
       }
     }, {
-      "match" : ".*percent.*",
-      "properties" : {
-        "validMax" : 100
-      }
-    }, {
       "match" : "netuitive.winsrv.network_interface.*\\.utilizationpercent",
       "properties" : {
         "tags" : {
@@ -55,6 +50,112 @@
       "match" : "netuitive.winsrv.network_interface\\..*\\.packets_total_errors",
       "properties" : {
         "STATISTIC" : "sum"
+      }
+    }, {
+      "match" : ".*queue_length",
+      "properties" : {
+        "tags" : {
+          "unit" : "count"
+        }
+      }
+    }, {
+      "match" : ".*percent.?",
+      "properties" : {
+        "tags" : {
+          "unit" : "percent"
+        },
+        "validMax" : 100
+      }
+    }, {
+      "match" : ".*megabytes_free",
+      "properties" : {
+        "tags" : {
+          "unit" : "mbytes"
+        }
+      }
+    }, {
+      "match" : ".*_bytes.?",
+      "properties" : {
+        "tags" : {
+          "unit" : "bytes"
+        }
+      }
+    }, {
+      "match" : "netuitive.winsrv.memory.page_file_size",
+      "properties" : {
+        "tags" : {
+          "unit" : "bytes"
+        }
+      }
+    }, {
+      "match" : ".*_errors",
+      "properties" : {
+        "tags" : {
+          "unit" : "count"
+        }
+      }
+    }, {
+      "match" : "system.processes",
+      "properties" : {
+        "tags" : {
+          "unit" : "count"
+        }
+      }
+    }, {
+      "match" : ".*_faults_per_sec.?",
+      "properties" : {
+        "tags" : {
+          "unit" : "fps"
+        }
+      }
+    }, {
+      "match" : "memory.pages.?_per_sec",
+      "properties" : {
+        "tags" : {
+          "unit" : "Pps"
+        }
+      }
+    }, {
+      "match" : "network.interface\\..*\\.bytes_.*_per_sec",
+      "properties" : {
+        "tags" : {
+          "unit" : "Bps"
+        }
+      }
+    }, {
+      "match" : "network.interface\\..*\\.packets_.*_per_sec",
+      "properties" : {
+        "tags" : {
+          "unit" : "pps"
+        }
+      }
+    }, {
+      "match" : "network.interface\\..*\\.current_bandwidth",
+      "properties" : {
+        "tags" : {
+          "unit" : "bps"
+        }
+      }
+    }, {
+      "match" : "physical_disk\\..*\\.avg_sec.*",
+      "properties" : {
+        "tags" : {
+          "unit" : "s"
+        }
+      }
+    }, {
+      "match" : "system.context_switches_per_sec",
+      "properties" : {
+        "tags" : {
+          "unit" : "ops"
+        }
+      }
+    }, {
+      "match" : "system.system_calls_per_sec",
+      "properties" : {
+        "tags" : {
+          "unit" : "ops"
+        }
       }
     } ]
   }
