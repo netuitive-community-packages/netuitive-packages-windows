@@ -66,6 +66,20 @@
         "fqn" : "netuitive.winsrv.memory.page_file_available_bytes",
         "name" : "Page File Available Bytes"
       }
+    }, {
+      "match" : "netuitive.winsrv.memory.utilizationpercent",
+      "properties" : {
+        "expression" : "Math.min(100, (attribute['ram bytes'].value == 0 ? 0 : ((attribute['ram bytes'].value - data['memory.available_bytes'].actual) / attribute['ram bytes'].value) * 100))",
+        "fqn" : "netuitive.winsrv.memory.utilizationpercent",
+        "name" : "Memory Utilization Percent"
+      }
+    }, {
+      "match" : "netuitive.winsrv.logical_disk.utilizationpercent",
+      "properties" : {
+        "expression" : "100 - data['logical_disk._Total.percent_free'].actual",
+        "fqn" : "netuitive.winsrv.logical_disk.utilizationpercent",
+        "name" : "Logical Disk Utilization (Percent Diskspace in Use)"
+      }
     } ]
   }
 }
