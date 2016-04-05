@@ -1,0 +1,33 @@
+{
+  "policy" : {
+    "id" : null,
+    "name" : "Windows - Elevated Event Count",
+    "description" : "The number of Windows Events being generated is higher than expected based on historical behavior.",
+    "scope" : {
+      "elementName" : "",
+      "elementType" : "WINSRV",
+      "elementTags" : { }
+    },
+    "duration" : 900,
+    "conditions" : [ {
+      "metric" : "windows_events.event_count",
+      "wildcard" : null,
+      "analytic" : "baselineDeviation",
+      "operator" : "defined",
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
+    } ],
+    "actions" : [ {
+      "type" : "event",
+      "category" : 2
+    } ],
+    "enabled" : true,
+    "deleted" : false,
+    "originTenantId" : null,
+    "originPolicyId" : null,
+    "creatorEmail" : null,
+    "lastUpdated" : null
+  }
+}
