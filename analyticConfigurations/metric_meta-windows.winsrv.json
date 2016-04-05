@@ -157,6 +157,11 @@
           "unit" : "ops"
         }
       }
+    }, {
+      "match" : "windows_events.event_count",
+      "properties" : {
+        "STATISTIC" : "sum"
+      }
     } ]
   }
 }

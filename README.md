@@ -1,8 +1,13 @@
-#netuitive.packages.windows 1.3.0
+#netuitive.packages.windows 1.4.0
 
 For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/Windows/new_windows_datasource.htm).
 
 ##Release History
+
+###Version 1.4.0
+
+* Added configuration for new metric windows_events.
+* Added new policy "Windows - Elevated Event Count".
 
 ###Version 1.3.0
 
