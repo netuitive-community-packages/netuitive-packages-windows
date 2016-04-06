@@ -13,7 +13,7 @@
       "metric" : "windows_events.event_count",
       "wildcard" : null,
       "analytic" : "baselineDeviation",
-      "operator" : "defined",
+      "operator" : ">",
       "level" : null,
       "level2" : null,
       "metricThresholdLevel" : null,

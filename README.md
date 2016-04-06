@@ -4,6 +4,10 @@ For detailed information on this package, please refer to the [online documentat
 
 ##Release History
 
+###Version 1.4.1
+
+* Fixed bug with "Windows - Elevated Event Count"; need to look only for upper deviations.
+
 ###Version 1.4.0
 
 * Added configuration for new metric windows_events.
