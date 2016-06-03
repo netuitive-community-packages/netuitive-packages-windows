@@ -11,6 +11,14 @@
       "elementTags" : null
     },
     "metrics" : [ {
+      "match" : ".*percent.?",
+      "properties" : {
+        "tags" : {
+          "unit" : "percent"
+        },
+        "validMax" : 100
+      }
+    }, {
       "match" : "network_interface.*\\.packets_outbound_errors",
       "properties" : {
         "STATISTIC" : "sum"
@@ -31,14 +39,24 @@
       "match" : "netuitive.winsrv.memory.utilizationpercent",
       "properties" : {
         "tags" : {
-          "utilization" : true
+          "utilization" : true,
+          "unit" : "percent"
         }
       }
     }, {
       "match" : "netuitive.winsrv.network_interface.*\\.utilizationpercent",
       "properties" : {
         "tags" : {
-          "utilization" : true
+          "utilization" : true,
+          "unit" : "percent"
+        }
+      }
+    }, {
+      "match" : "netuitive.winsrv.logical_disk.*\\.utilizationpercent",
+      "properties" : {
+        "tags" : {
+          "utilization" : true,
+          "unit" : "percent"
         }
       }
     }, {

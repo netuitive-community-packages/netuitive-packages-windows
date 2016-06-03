@@ -53,7 +53,7 @@
         "correlation" : true
       }
     }, {
-      "match" : "system.processor_queue_length",
+      "match" : "netuitive.winsrv.system.processor_queue_length_normalized",
       "properties" : {
         "baseline" : true,
         "correlation" : true
