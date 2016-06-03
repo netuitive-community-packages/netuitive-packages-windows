@@ -76,9 +76,16 @@
     }, {
       "match" : "netuitive.winsrv.logical_disk.utilizationpercent",
       "properties" : {
-        "expression" : "100 - data['logical_disk._Total.percent_free'].actual",
-        "fqn" : "netuitive.winsrv.logical_disk.utilizationpercent",
-        "name" : "Logical Disk Utilization (Percent Diskspace in Use)"
+        "expression" : "100 - data['logical_disk.${1}.percent_free'].actual",
+        "for" : "logical_disk.(.*).percent_free",
+        "fqn" : "netuitive.winsrv.logical_disk.${1}.utilizationpercent"
+      }
+    }, {
+      "match" : "netuitive.winsrv.system.processor_queue_length_normalized",
+      "properties" : {
+        "expression" : "data['system.processor_queue_length'].actual / attribute['cpus'].value",
+        "fqn" : "netuitive.winsrv.system.processor_queue_length_normalized",
+        "name" : "Processor Queue Length Normalized"
       }
     } ]
   }

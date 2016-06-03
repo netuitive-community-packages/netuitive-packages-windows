@@ -1,8 +1,15 @@
-#netuitive.packages.windows 1.4.1
+#netuitive.packages.windows 1.5.0
 
 For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/Windows/new_windows_datasource.htm).
 
 ##Release History
+
+###Version 1.5.0
+
+* Fixed bug with the Events widget on the Element Detail Page.
+* Added new computed metric for normalizing run queue size (aka processor queue length) across CPUs.
+* Adjusted the Heavy CPU Usage policy to look at the normalized run queue size.
+* Added computed metrics for disk utilization on individual logical disks.
 
 ###Version 1.4.1
 

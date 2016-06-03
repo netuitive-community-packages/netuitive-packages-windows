@@ -10,20 +10,11 @@
     },
     "duration" : 900,
     "conditions" : [ {
-      "metric" : "system.processor_queue_length",
+      "metric" : "netuitive.winsrv.system.processor_queue_length_normalized",
       "wildcard" : null,
-      "analytic" : "baselineDeviation",
+      "analytic" : "actual",
       "operator" : ">",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    }, {
-      "metric" : "system.processor_queue_length",
-      "wildcard" : null,
-      "analytic" : "contextualDeviation",
-      "operator" : ">",
-      "level" : null,
+      "level" : 2.0,
       "level2" : null,
       "metricThresholdLevel" : null,
       "metricThresholdAnalytic" : null
@@ -72,6 +63,7 @@
     "deleted" : false,
     "originTenantId" : null,
     "originPolicyId" : null,
+    "creatorEmail" : null,
     "lastUpdated" : null
   }
 }
