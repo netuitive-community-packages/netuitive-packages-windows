@@ -27,17 +27,20 @@
         "selectedAttributes" : "[]",
         "elementScopeTags" : "[]",
         "useElementNameContains" : "true",
+        "useAllElementScopeTags" : "false",
         "element_id" : null,
-        "elementScopeTypes" : "[]",
+        "elementScopeTypes" : "[\"WINSRV\"]",
         "metricLimit" : "10",
+        "useAllMetricScopeTags" : "false",
         "metricUnit" : null,
         "metricAggs" : "[]",
         "elementScopeIds" : "[]",
         "elementScopeAttributes" : "[]",
         "groupName" : null,
-        "elementNameContains" : "win-i7o3v6j9tmh",
+        "elementNameContains" : "",
         "showHighest" : "true",
         "metric_fqn" : null,
+        "metricScopeTags" : "[]",
         "width" : "medium",
         "metrics" : "[]",
         "selectedTab" : "table"
@@ -45,7 +48,7 @@
       "dashboardId" : null,
       "userId" : null,
       "created" : "2016-03-15T16:45:17Z",
-      "updated" : "2016-03-16T21:40:13Z"
+      "updated" : "2016-06-06T11:00:53Z"
     }, {
       "id" : "0be171ff-f55f-4d33-b575-48bc79bafa22",
       "name" : "CPU Utilization",
