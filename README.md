@@ -1,8 +1,12 @@
-#netuitive.packages.windows 1.5.0
+#netuitive.packages.windows 1.5.1
 
 For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/Windows/new_windows_datasource.htm).
 
 ##Release History
+
+###Version 1.5.1
+
+* Fixed bug with the Events widget on the Element Detail Page.
 
 ###Version 1.5.0
 
