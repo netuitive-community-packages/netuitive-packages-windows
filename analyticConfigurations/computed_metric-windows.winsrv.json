@@ -39,6 +39,18 @@
         "fqn" : "netuitive.winsrv.network_interface.${1}.utilizationpercent"
       }
     }, {
+      "match" : "netuitive.winsrv.network_interface.maxutilizationpercent",
+      "properties" : {
+        "expression" : "data.max('netuitive.winsrv.network_interface.(.*).utilizationpercent')",
+        "fqn" : "netuitive.winsrv.network_interface.maxutilizationpercent"
+      }
+    }, {
+      "match" : "netuitive.winsrv.network_interface.maxerrorpercent",
+      "properties" : {
+        "expression" : "data.max('netuitive.winsrv.network_interface.(.*).packets_error_percent')",
+        "fqn" : "netuitive.winsrv.network_interface.maxerrorpercent"
+      }
+    }, {
       "match" : "netuitive.winsrv.memory.unavailable_bytes",
       "properties" : {
         "expression" : "(attribute['ram bytes'] == null || attribute['ram bytes'].value == 0) ? ((attribute['ram'] == null || attribute['ram'].value == 0) ? 0 : (attribute['ram'].value - data['memory.available_bytes'].actual)) : (attribute['ram bytes'].value - data['memory.available_bytes'].actual)",
@@ -79,6 +91,12 @@
         "expression" : "100 - data['logical_disk.${1}.percent_free'].actual",
         "for" : "logical_disk.(.*).percent_free",
         "fqn" : "netuitive.winsrv.logical_disk.${1}.utilizationpercent"
+      }
+    }, {
+      "match" : "netuitive.winsrv.physical_disk._Total.percent_busy_time",
+      "properties" : {
+        "expression" : "100 - data['physical_disk._Total.percent_idle_time'].actual",
+        "fqn" : "netuitive.winsrv.physical_disk._Total.percent_busy_time"
       }
     }, {
       "match" : "netuitive.winsrv.system.processor_queue_length_normalized",

@@ -11,10 +11,44 @@
       "elementTags" : null
     },
     "metrics" : [ {
-      "match" : ".*percent.?",
+      "match" : "^(logical_disk|memory|physical_disk)\\..*percent.*",
       "properties" : {
         "tags" : {
           "unit" : "percent"
+        },
+        "validMax" : 100
+      }
+    }, {
+      "match" : "netuitive.winsrv.physical_disk._Total.percent_busy_time",
+      "properties" : {
+        "tags" : {
+          "unit" : "percent",
+          "utilization" : true
+        },
+        "validMax" : 100
+      }
+    }, {
+      "match" : "processor\\.[^_].*percent.*",
+      "properties" : {
+        "tags" : {
+          "unit" : "percent"
+        },
+        "validMax" : 100
+      }
+    }, {
+      "match" : "processor\\._Total\\.percent_(idle|interrupt|privileged|user)_time$",
+      "properties" : {
+        "tags" : {
+          "unit" : "percent"
+        },
+        "validMax" : 100
+      }
+    }, {
+      "match" : "processor._Total.percent_processor_time",
+      "properties" : {
+        "tags" : {
+          "unit" : "percent",
+          "utilization" : true
         },
         "validMax" : 100
       }
@@ -29,35 +63,47 @@
         "STATISTIC" : "sum"
       }
     }, {
-      "match" : "processor._Total.percent_processor_time",
-      "properties" : {
-        "tags" : {
-          "utilization" : true
-        }
-      }
-    }, {
       "match" : "netuitive.winsrv.memory.utilizationpercent",
       "properties" : {
         "tags" : {
           "utilization" : true,
           "unit" : "percent"
-        }
+        },
+        "validMax" : 100
       }
     }, {
       "match" : "netuitive.winsrv.network_interface.*\\.utilizationpercent",
       "properties" : {
         "tags" : {
-          "utilization" : true,
           "unit" : "percent"
-        }
+        },
+        "validMax" : 100
       }
     }, {
-      "match" : "netuitive.winsrv.logical_disk.*\\.utilizationpercent",
+      "match" : "netuitive.winsrv.network_interface.maxutilizationpercent",
       "properties" : {
         "tags" : {
           "utilization" : true,
           "unit" : "percent"
-        }
+        },
+        "validMax" : 100
+      }
+    }, {
+      "match" : "netuitive.winsrv.logical_disk\\.[^_].*\\.utilizationpercent",
+      "properties" : {
+        "tags" : {
+          "unit" : "percent"
+        },
+        "validMax" : 100
+      }
+    }, {
+      "match" : "netuitive.winsrv.logical_disk._Total.utilizationpercent",
+      "properties" : {
+        "tags" : {
+          "utilization" : true,
+          "unit" : "percent"
+        },
+        "validMax" : 100
       }
     }, {
       "match" : "netuitive.winsrv.network_interface\\..*\\.packets_total",
@@ -75,14 +121,6 @@
         "tags" : {
           "unit" : "count"
         }
-      }
-    }, {
-      "match" : ".*percent.?",
-      "properties" : {
-        "tags" : {
-          "unit" : "percent"
-        },
-        "validMax" : 100
       }
     }, {
       "match" : ".*megabytes_free",
