@@ -59,25 +59,19 @@
         "correlation" : true
       }
     }, {
-      "match" : "netuitive.winsrv.network_interface.*.packets_total",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
-      }
-    }, {
-      "match" : "netuitive.winsrv.network_interface.*.packets_error_percent",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
-      }
-    }, {
       "match" : "netuitive.winsrv.memory.utilizationpercent",
       "properties" : {
         "baseline" : true,
         "correlation" : true
       }
     }, {
-      "match" : "netuitive.winsrv.network_interface.*.utilizationpercent",
+      "match" : "netuitive.winsrv.network_interface.maxutilizationpercent",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "netuitive.winsrv.logical_disk._Total.utilizationpercent",
       "properties" : {
         "baseline" : true,
         "correlation" : true
