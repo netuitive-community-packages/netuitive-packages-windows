@@ -71,10 +71,10 @@
         "correlation" : true
       }
     }, {
-      "match" : "netuitive.winsrv.logical_disk._Total.utilizationpercent",
+      "match" : "netuitive.winsrv.logical_disk\\..*\\.utilizationpercent",
       "properties" : {
-        "baseline" : true,
-        "correlation" : true
+        "baseline" : false,
+        "correlation" : false
       }
     } ]
   }
