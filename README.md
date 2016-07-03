@@ -1,8 +1,12 @@
-#netuitive.packages.windows 1.6.0
+#netuitive.packages.windows 1.6.1
 
 For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/Windows/new_windows_datasource.htm).
 
 ##Release History
+
+###Version 1.6.1
+
+* Don't baseline or correlate disk space metrics; these are slow-changing metrics that don't lend themselves well to such.
 
 ###Version 1.6.0
 
