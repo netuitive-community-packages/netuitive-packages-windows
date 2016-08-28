@@ -5,6 +5,9 @@
     "description" : "The number of Windows Events being generated is higher than expected based on historical behavior.",
     "scope" : {
       "elementName" : "",
+      "elementNameExclude" : null,
+      "fqnIncludes" : [ ],
+      "fqnExcludes" : [ ],
       "elementType" : "WINSRV",
       "elementTags" : { }
     },
@@ -12,6 +15,7 @@
     "conditions" : [ {
       "metric" : "windows_events.event_count",
       "wildcard" : null,
+      "metricScopeTags" : { },
       "analytic" : "baselineDeviation",
       "operator" : "defined",
       "level" : null,
@@ -19,6 +23,7 @@
       "metricThresholdLevel" : null,
       "metricThresholdAnalytic" : null
     } ],
+    "eventConditions" : [ ],
     "actions" : [ {
       "type" : "event",
       "category" : 2

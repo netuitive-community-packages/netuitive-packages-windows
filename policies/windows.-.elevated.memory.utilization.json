@@ -5,6 +5,9 @@
     "description" : "This policy will generate a WARNING event when memory utilization on the Windows server is higher than expected.",
     "scope" : {
       "elementName" : "",
+      "elementNameExclude" : null,
+      "fqnIncludes" : [ ],
+      "fqnExcludes" : [ ],
       "elementType" : "WINSRV",
       "elementTags" : { }
     },
@@ -12,6 +15,7 @@
     "conditions" : [ {
       "metric" : "netuitive.winsrv.memory.utilizationpercent",
       "wildcard" : null,
+      "metricScopeTags" : { },
       "analytic" : "baselineDeviation",
       "operator" : ">",
       "level" : null,
@@ -21,6 +25,7 @@
     }, {
       "metric" : "netuitive.winsrv.memory.utilizationpercent",
       "wildcard" : null,
+      "metricScopeTags" : { },
       "analytic" : "contextualDeviation",
       "operator" : ">",
       "level" : null,
@@ -28,6 +33,7 @@
       "metricThresholdLevel" : null,
       "metricThresholdAnalytic" : null
     } ],
+    "eventConditions" : [ ],
     "actions" : [ {
       "type" : "event",
       "category" : 2
