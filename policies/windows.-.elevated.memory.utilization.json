@@ -4,7 +4,7 @@
     "name" : "Windows - Elevated Memory Utilization",
     "description" : "This policy will generate a WARNING event when memory utilization on the Windows server is higher than expected.",
     "scope" : {
-      "elementName" : "",
+      "elementName" : null,
       "elementNameExclude" : null,
       "fqnIncludes" : [ ],
       "fqnExcludes" : [ ],
