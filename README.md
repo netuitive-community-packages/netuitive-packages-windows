@@ -1,8 +1,12 @@
-#netuitive.packages.windows 1.6.2
+#netuitive.packages.windows 1.6.3
 
 For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/Windows/new_windows_datasource.htm).
 
 ##Release History
+
+###Version 1.6.3
+
+* Bug fix: "Windows - Elevated Event Count" should only be looking for upper deviations, not any deviation.
 
 ###Version 1.6.2
 

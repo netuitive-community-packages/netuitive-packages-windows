@@ -4,7 +4,7 @@
     "name" : "Windows - Heavy Disk Load",
     "description" : "This policy will generate a WARNING event if the average disk queue length for the server is higher than expected, indicating a potential problem with heavy disk load.",
     "scope" : {
-      "elementName" : "",
+      "elementName" : null,
       "elementNameExclude" : null,
       "fqnIncludes" : [ ],
       "fqnExcludes" : [ ],
