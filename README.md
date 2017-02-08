@@ -1,6 +1,6 @@
 #netuitive.packages.windows 1.6.3
 
-For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/Windows/new_windows_datasource.htm).
+For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/windows.htm).
 
 ##Release History
 
