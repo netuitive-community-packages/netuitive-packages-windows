@@ -1,8 +1,12 @@
-#netuitive.packages.windows 1.6.3
+#netuitive.packages.windows 1.7.0
 
 For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/windows.htm).
 
 ##Release History
+
+###Version 1.7.0
+
+* Updated gridstack dashboard layouts
 
 ###Version 1.6.3
 
