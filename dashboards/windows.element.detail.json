@@ -9,7 +9,8 @@
       "timeRangeDuration" : "3600",
       "density" : "normal",
       "refreshIntervalSeconds" : "300",
-      "wrap" : "true"
+      "wrap" : "true",
+      "gridstackContents": "[{\"id\":\"1336653e-cf31-43fd-af7a-b792d8603473\",\"x\":8,\"y\":18,\"width\":4,\"height\":9},{\"id\":\"0be171ff-f55f-4d33-b575-48bc79bafa22\",\"x\":4,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"6f026680-66bc-4b62-aa6a-df203e76a70e\",\"x\":4,\"y\":18,\"width\":4,\"height\":9},{\"id\":\"e1a68cc5-d1d8-4d0a-b4e2-270ef568d401\",\"x\":8,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"6c571c7a-4853-4b8a-92f8-c920ba001ebf\",\"x\":0,\"y\":9,\"width\":4,\"height\":9},{\"id\":\"50baebff-92b4-4d67-9288-4d39bd51502f\",\"x\":0,\"y\":18,\"width\":4,\"height\":9},{\"id\":\"03f9f3a1-755b-491c-ba79-97322f994038\",\"x\":8,\"y\":9,\"width\":4,\"height\":9},{\"id\":\"111f3e78-901b-4964-be11-2a8a398130b1\",\"x\":4,\"y\":9,\"width\":4,\"height\":9},{\"id\":\"04078bdc-a110-4aa0-ab2e-972c652e8ae6\",\"x\":0,\"y\":0,\"width\":4,\"height\":9}]"
     },
     "tenantId" : null,
     "userId" : null,
