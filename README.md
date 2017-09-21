@@ -1,8 +1,13 @@
-# netuitive.packages.windows 1.7.0
+# netuitive.packages.windows
 
 For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/windows.htm).
 
 ## Release History
+
+### Version next
+
+* Updated element details dashboard layout
+* Updated summary dashboard for new widget configs
 
 ### Version 1.7.0
 
