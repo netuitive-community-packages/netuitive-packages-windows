@@ -18,6 +18,12 @@
   },
   "policies" : [ {
     "data" : {
+      "file" : "policies/windows.-.agent.appears.to.be.down.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
       "file" : "policies/windows.-.elevated.disk.latency.json",
       "encoding" : "application/json",
       "content" : null

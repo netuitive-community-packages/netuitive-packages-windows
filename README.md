@@ -7,15 +7,16 @@ For detailed information on this package, please refer to the [online documentat
 ### Version next
 
 * Converted single elementType to elementTypes array in policy scopes.
+* Added new policy: "Windows - Agent Appears to be Down".
 
 ### Version 1.8.0
 
-* Updated element details dashboard layout
-* Updated summary dashboard for new widget configs
+* Updated element details dashboard layout.
+* Updated summary dashboard for new widget configs.
 
 ### Version 1.7.0
 
-* Updated gridstack dashboard layouts
+* Updated gridstack dashboard layouts.
 
 ### Version 1.6.3
 
@@ -67,7 +68,7 @@ For detailed information on this package, please refer to the [online documentat
 ### Version 1.1.0
 
 * Added summary dashboard.
-* Bug fix: the wrong configuration for computed metrics had been included in v1.0
+* Bug fix: the wrong configuration for computed metrics had been included in v1.0.
 
 ### Version 1.0.0
 
