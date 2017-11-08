@@ -4,6 +4,10 @@ For detailed information on this package, please refer to the [online documentat
 
 ## Release History
 
+### Version next
+
+* Converted single elementType to elementTypes array in policy scopes.
+
 ### Version 1.8.0
 
 * Updated element details dashboard layout
