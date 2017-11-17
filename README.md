@@ -4,7 +4,7 @@ For detailed information on this package, please refer to the [online documentat
 
 ## Release History
 
-### Version next
+### Version 2.0.0
 
 * Converted single elementType to elementTypes array in policy scopes.
 * Added new policy: "Windows - Agent Appears to be Down".
