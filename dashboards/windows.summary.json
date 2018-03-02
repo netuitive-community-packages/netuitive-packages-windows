@@ -30,7 +30,7 @@
         "elementScopeAttributes" : "[]",
         "showHighest" : "true",
         "metricScopeTags" : "[]",
-        "metrics" : "[{\"fqn\":\"processor._Total.percent_user_time\",\"aggFns\":[]}]",
+        "metrics" : "[{\"fqn\":\"netuitive.winsrv.memory.utilizationpercent\",\"aggFns\":[]}]",
         "selectedTab" : "table"
       }
     }, {

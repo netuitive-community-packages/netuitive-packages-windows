@@ -4,6 +4,10 @@ For detailed information on this package, please refer to the [online documentat
 
 ## Release History
 
+### Version next
+
+* Fixed Memory Utilization by Element widget so it uses the proper metric.
+
 ### Version 2.0.0
 
 * Converted single elementType to elementTypes array in policy scopes.
