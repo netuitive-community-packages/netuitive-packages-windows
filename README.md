@@ -4,7 +4,7 @@ For detailed information on this package, please refer to the [online documentat
 
 ## Release History
 
-### Version next
+### Version 2.0.1
 
 * Fixed Memory Utilization by Element widget so it uses the proper metric.
 
