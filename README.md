@@ -4,7 +4,7 @@ For detailed information on this package, please refer to the [online documentat
 
 ## Release History
 
-### Version next
+### Version 2.0.2
 
 * Updated heartbeat policy title and description.
 
