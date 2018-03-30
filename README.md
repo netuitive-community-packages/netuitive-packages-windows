@@ -4,6 +4,10 @@ For detailed information on this package, please refer to the [online documentat
 
 ## Release History
 
+### Version next
+
+* Adjusted build to use metricly-cli for validation
+
 ### Version 2.0.2
 
 * Updated heartbeat policy title and description.
