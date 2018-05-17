@@ -6,7 +6,8 @@ For detailed information on this package, please refer to the [online documentat
 
 ### Version next
 
-* Adjusted build to use metricly-cli for validation
+* Adjusted build to use metricly-cli for validation.
+* Added SQL Server metrics to be correlated.
 
 ### Version 2.0.2
 
