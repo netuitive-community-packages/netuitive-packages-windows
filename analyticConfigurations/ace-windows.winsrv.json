@@ -42,6 +42,12 @@
         "correlation" : true
       }
     }, {
+      "match" : "sql_server\\..*",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
       "match" : "system.context_switches_per_sec",
       "properties" : {
         "baseline" : true,

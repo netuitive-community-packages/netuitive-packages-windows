@@ -4,6 +4,11 @@ For detailed information on this package, please refer to the [online documentat
 
 ## Release History
 
+### Version 2.1.0
+
+* Adjusted build to use metricly-cli for validation.
+* Added SQL Server metrics to be correlated.
+
 ### Version 2.0.2
 
 * Updated heartbeat policy title and description.
