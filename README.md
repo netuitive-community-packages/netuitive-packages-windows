@@ -4,6 +4,8 @@ For detailed information on this package, please refer to the [online documentat
 
 ## Release History
 
+* Add a memory utilization floor to the Elevated Memory policy
+
 ### Version 2.1.0
 
 * Adjusted build to use metricly-cli for validation.
