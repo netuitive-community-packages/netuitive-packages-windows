@@ -32,6 +32,16 @@
       "level2" : null,
       "metricThresholdLevel" : null,
       "metricThresholdAnalytic" : null
+    }, {
+      "metric": "netuitive.winsrv.memory.utilizationpercent",
+      "wildcard": null,
+      "metricScopeTags": { },
+      "analytic": "actual",
+      "operator": ">=",
+      "level": 50.0,
+      "level2": null,
+      "metricThresholdLevel": null,
+      "metricThresholdAnalytic": null
     } ],
     "eventConditions" : [ ],
     "actions" : [ {
