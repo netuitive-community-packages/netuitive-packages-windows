@@ -1,224 +1,248 @@
 {
-  "analyticConfiguration" : {
-    "tenantId" : null,
-    "type" : "METRIC_META",
-    "id" : null,
-    "packageId" : null,
-    "name" : "Windows WINSRV",
-    "scope" : {
-      "elementName" : null,
-      "elementType" : "WINSRV",
-      "elementTags" : null,
-      "metricMatches" : null
+  "analyticConfiguration": {
+    "metrics": [
+      {
+        "match": "^(logical_disk|memory|physical_disk)\\..*percent.*",
+        "properties": {
+          "tags": {
+            "unit": "percent"
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "netuitive.winsrv.physical_disk._Total.percent_busy_time",
+        "properties": {
+          "tags": {
+            "unit": "percent",
+            "utilization": true
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "processor\\.[^_].*percent.*",
+        "properties": {
+          "tags": {
+            "unit": "percent"
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "processor\\._Total\\.percent_(idle|interrupt|privileged|user)_time$",
+        "properties": {
+          "tags": {
+            "unit": "percent"
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "processor._Total.percent_processor_time",
+        "properties": {
+          "tags": {
+            "unit": "percent",
+            "utilization": true
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "network_interface.*\\.packets_outbound_errors",
+        "properties": {
+          "STATISTIC": "sum"
+        }
+      },
+      {
+        "match": "network_interface.*\\.packets_received_errors",
+        "properties": {
+          "STATISTIC": "sum"
+        }
+      },
+      {
+        "match": "netuitive.winsrv.memory.utilizationpercent",
+        "properties": {
+          "tags": {
+            "unit": "percent",
+            "utilization": true
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "netuitive.winsrv.network_interface.*\\.utilizationpercent",
+        "properties": {
+          "tags": {
+            "unit": "percent"
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "netuitive.winsrv.network_interface.maxutilizationpercent",
+        "properties": {
+          "tags": {
+            "unit": "percent",
+            "utilization": true
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "netuitive.winsrv.logical_disk\\.[^_].*\\.utilizationpercent",
+        "properties": {
+          "tags": {
+            "unit": "percent"
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "netuitive.winsrv.logical_disk._Total.utilizationpercent",
+        "properties": {
+          "tags": {
+            "unit": "percent",
+            "utilization": true
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "netuitive.winsrv.network_interface\\..*\\.packets_total",
+        "properties": {
+          "STATISTIC": "sum"
+        }
+      },
+      {
+        "match": "netuitive.winsrv.network_interface\\..*\\.packets_total_errors",
+        "properties": {
+          "STATISTIC": "sum"
+        }
+      },
+      {
+        "match": ".*queue_length",
+        "properties": {
+          "tags": {
+            "unit": "count"
+          }
+        }
+      },
+      {
+        "match": ".*megabytes_free",
+        "properties": {
+          "tags": {
+            "unit": "mbytes"
+          }
+        }
+      },
+      {
+        "match": ".*_bytes.?",
+        "properties": {
+          "tags": {
+            "unit": "bytes"
+          }
+        }
+      },
+      {
+        "match": "netuitive.winsrv.memory.page_file_size",
+        "properties": {
+          "tags": {
+            "unit": "bytes"
+          }
+        }
+      },
+      {
+        "match": ".*_errors",
+        "properties": {
+          "tags": {
+            "unit": "count"
+          }
+        }
+      },
+      {
+        "match": "system.processes",
+        "properties": {
+          "tags": {
+            "unit": "count"
+          }
+        }
+      },
+      {
+        "match": ".*_faults_per_sec.?",
+        "properties": {
+          "tags": {
+            "unit": "fps"
+          }
+        }
+      },
+      {
+        "match": "memory.pages.?_per_sec",
+        "properties": {
+          "tags": {
+            "unit": "Pps"
+          }
+        }
+      },
+      {
+        "match": "network.interface\\..*\\.bytes_.*_per_sec",
+        "properties": {
+          "tags": {
+            "unit": "Bps"
+          }
+        }
+      },
+      {
+        "match": "network.interface\\..*\\.packets_.*_per_sec",
+        "properties": {
+          "tags": {
+            "unit": "pps"
+          }
+        }
+      },
+      {
+        "match": "network.interface\\..*\\.current_bandwidth",
+        "properties": {
+          "tags": {
+            "unit": "bps"
+          }
+        }
+      },
+      {
+        "match": "physical_disk\\..*\\.avg_sec.*",
+        "properties": {
+          "tags": {
+            "unit": "s"
+          }
+        }
+      },
+      {
+        "match": "system.context_switches_per_sec",
+        "properties": {
+          "tags": {
+            "unit": "ops"
+          }
+        }
+      },
+      {
+        "match": "system.system_calls_per_sec",
+        "properties": {
+          "tags": {
+            "unit": "ops"
+          }
+        }
+      },
+      {
+        "match": "windows_events.event_count",
+        "properties": {
+          "STATISTIC": "sum"
+        }
+      }
+    ],
+    "name": "Windows WINSRV",
+    "scope": {
+      "elementType": "WINSRV"
     },
-    "metrics" : [ {
-      "match" : "^(logical_disk|memory|physical_disk)\\..*percent.*",
-      "properties" : {
-        "tags" : {
-          "unit" : "percent"
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : "netuitive.winsrv.physical_disk._Total.percent_busy_time",
-      "properties" : {
-        "tags" : {
-          "unit" : "percent",
-          "utilization" : true
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : "processor\\.[^_].*percent.*",
-      "properties" : {
-        "tags" : {
-          "unit" : "percent"
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : "processor\\._Total\\.percent_(idle|interrupt|privileged|user)_time$",
-      "properties" : {
-        "tags" : {
-          "unit" : "percent"
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : "processor._Total.percent_processor_time",
-      "properties" : {
-        "tags" : {
-          "unit" : "percent",
-          "utilization" : true
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : "network_interface.*\\.packets_outbound_errors",
-      "properties" : {
-        "STATISTIC" : "sum"
-      }
-    }, {
-      "match" : "network_interface.*\\.packets_received_errors",
-      "properties" : {
-        "STATISTIC" : "sum"
-      }
-    }, {
-      "match" : "netuitive.winsrv.memory.utilizationpercent",
-      "properties" : {
-        "tags" : {
-          "utilization" : true,
-          "unit" : "percent"
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : "netuitive.winsrv.network_interface.*\\.utilizationpercent",
-      "properties" : {
-        "tags" : {
-          "unit" : "percent"
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : "netuitive.winsrv.network_interface.maxutilizationpercent",
-      "properties" : {
-        "tags" : {
-          "utilization" : true,
-          "unit" : "percent"
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : "netuitive.winsrv.logical_disk\\.[^_].*\\.utilizationpercent",
-      "properties" : {
-        "tags" : {
-          "unit" : "percent"
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : "netuitive.winsrv.logical_disk._Total.utilizationpercent",
-      "properties" : {
-        "tags" : {
-          "utilization" : true,
-          "unit" : "percent"
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : "netuitive.winsrv.network_interface\\..*\\.packets_total",
-      "properties" : {
-        "STATISTIC" : "sum"
-      }
-    }, {
-      "match" : "netuitive.winsrv.network_interface\\..*\\.packets_total_errors",
-      "properties" : {
-        "STATISTIC" : "sum"
-      }
-    }, {
-      "match" : ".*queue_length",
-      "properties" : {
-        "tags" : {
-          "unit" : "count"
-        }
-      }
-    }, {
-      "match" : ".*megabytes_free",
-      "properties" : {
-        "tags" : {
-          "unit" : "mbytes"
-        }
-      }
-    }, {
-      "match" : ".*_bytes.?",
-      "properties" : {
-        "tags" : {
-          "unit" : "bytes"
-        }
-      }
-    }, {
-      "match" : "netuitive.winsrv.memory.page_file_size",
-      "properties" : {
-        "tags" : {
-          "unit" : "bytes"
-        }
-      }
-    }, {
-      "match" : ".*_errors",
-      "properties" : {
-        "tags" : {
-          "unit" : "count"
-        }
-      }
-    }, {
-      "match" : "system.processes",
-      "properties" : {
-        "tags" : {
-          "unit" : "count"
-        }
-      }
-    }, {
-      "match" : ".*_faults_per_sec.?",
-      "properties" : {
-        "tags" : {
-          "unit" : "fps"
-        }
-      }
-    }, {
-      "match" : "memory.pages.?_per_sec",
-      "properties" : {
-        "tags" : {
-          "unit" : "Pps"
-        }
-      }
-    }, {
-      "match" : "network.interface\\..*\\.bytes_.*_per_sec",
-      "properties" : {
-        "tags" : {
-          "unit" : "Bps"
-        }
-      }
-    }, {
-      "match" : "network.interface\\..*\\.packets_.*_per_sec",
-      "properties" : {
-        "tags" : {
-          "unit" : "pps"
-        }
-      }
-    }, {
-      "match" : "network.interface\\..*\\.current_bandwidth",
-      "properties" : {
-        "tags" : {
-          "unit" : "bps"
-        }
-      }
-    }, {
-      "match" : "physical_disk\\..*\\.avg_sec.*",
-      "properties" : {
-        "tags" : {
-          "unit" : "s"
-        }
-      }
-    }, {
-      "match" : "system.context_switches_per_sec",
-      "properties" : {
-        "tags" : {
-          "unit" : "ops"
-        }
-      }
-    }, {
-      "match" : "system.system_calls_per_sec",
-      "properties" : {
-        "tags" : {
-          "unit" : "ops"
-        }
-      }
-    }, {
-      "match" : "windows_events.event_count",
-      "properties" : {
-        "STATISTIC" : "sum"
-      }
-    } ]
+    "type": "METRIC_META"
   }
 }

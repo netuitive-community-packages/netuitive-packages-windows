@@ -1,78 +1,48 @@
 {
-  "policy" : {
-    "id" : null,
-    "name" : "Windows - Heavy CPU Load",
-    "description" : "High CPU values by themselves are not always a good indicator of a server being under heavy load. This policy looks for upper deviations not only in CPU, but in run queue size (system.processor_queue_length) and context switches as well. Taken together, upper deviations in all three of these key metrics are a good indication of an overloaded server.",
-    "scope" : {
-      "elementName" : null,
-      "elementNameExclude" : null,
-      "fqnIncludes" : [ ],
-      "fqnExcludes" : [ ],
-      "elementTypes" : ["WINSRV"],
-      "elementTags" : { }
-    },
-    "duration" : 900,
-    "conditions" : [ {
-      "metric" : "netuitive.winsrv.system.processor_queue_length_normalized",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "actual",
-      "operator" : ">",
-      "level" : 2.0,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    }, {
-      "metric" : "processor._Total.percent_processor_time",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "baselineDeviation",
-      "operator" : ">",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    }, {
-      "metric" : "processor._Total.percent_processor_time",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "contextualDeviation",
-      "operator" : ">",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    }, {
-      "metric" : "system.context_switches_per_sec",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "baselineDeviation",
-      "operator" : ">",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    }, {
-      "metric" : "system.context_switches_per_sec",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "contextualDeviation",
-      "operator" : ">",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    } ],
-    "eventConditions" : [ ],
-    "actions" : [ {
-      "type" : "event",
-      "category" : 3
-    } ],
-    "enabled" : true,
-    "deleted" : false,
-    "originTenantId" : null,
-    "originPolicyId" : null,
-    "creatorEmail" : null,
-    "lastUpdated" : null
+  "policy": {
+    "actions": [
+      {
+        "category": 3,
+        "type": "event"
+      }
+    ],
+    "conditions": [
+      {
+        "analytic": "actual",
+        "level": 2,
+        "metric": "netuitive.winsrv.system.processor_queue_length_normalized",
+        "operator": ">"
+      },
+      {
+        "analytic": "baselineDeviation",
+        "metric": "processor._Total.percent_processor_time",
+        "operator": ">"
+      },
+      {
+        "analytic": "contextualDeviation",
+        "metric": "processor._Total.percent_processor_time",
+        "operator": ">"
+      },
+      {
+        "analytic": "baselineDeviation",
+        "metric": "system.context_switches_per_sec",
+        "operator": ">"
+      },
+      {
+        "analytic": "contextualDeviation",
+        "metric": "system.context_switches_per_sec",
+        "operator": ">"
+      }
+    ],
+    "deleted": false,
+    "description": "High CPU values by themselves are not always a good indicator of a server being under heavy load. This policy looks for upper deviations not only in CPU, but in run queue size (system.processor_queue_length) and context switches as well. Taken together, upper deviations in all three of these key metrics are a good indication of an overloaded server.",
+    "duration": 900,
+    "enabled": true,
+    "name": "Windows - Heavy CPU Load",
+    "scope": {
+      "elementTypes": [
+        "WINSRV"
+      ]
+    }
   }
 }

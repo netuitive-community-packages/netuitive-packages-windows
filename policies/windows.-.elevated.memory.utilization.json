@@ -1,58 +1,38 @@
 {
-  "policy" : {
-    "id" : null,
-    "name" : "Windows - Elevated Memory Utilization",
-    "description" : "This policy will generate a WARNING event when memory utilization on the Windows server is higher than expected.",
-    "scope" : {
-      "elementName" : null,
-      "elementNameExclude" : null,
-      "fqnIncludes" : [ ],
-      "fqnExcludes" : [ ],
-      "elementTypes" : ["WINSRV"],
-      "elementTags" : { }
-    },
-    "duration" : 600,
-    "conditions" : [ {
-      "metric" : "netuitive.winsrv.memory.utilizationpercent",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "baselineDeviation",
-      "operator" : ">",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    }, {
-      "metric" : "netuitive.winsrv.memory.utilizationpercent",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "contextualDeviation",
-      "operator" : ">",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    }, {
-      "metric": "netuitive.winsrv.memory.utilizationpercent",
-      "wildcard": null,
-      "metricScopeTags": { },
-      "analytic": "actual",
-      "operator": ">=",
-      "level": 50.0,
-      "level2": null,
-      "metricThresholdLevel": null,
-      "metricThresholdAnalytic": null
-    } ],
-    "eventConditions" : [ ],
-    "actions" : [ {
-      "type" : "event",
-      "category" : 2
-    } ],
-    "enabled" : true,
-    "deleted" : false,
-    "originTenantId" : null,
-    "originPolicyId" : null,
-    "creatorEmail" : null,
-    "lastUpdated" : null
+  "policy": {
+    "actions": [
+      {
+        "category": 2,
+        "type": "event"
+      }
+    ],
+    "conditions": [
+      {
+        "analytic": "baselineDeviation",
+        "metric": "netuitive.winsrv.memory.utilizationpercent",
+        "operator": ">"
+      },
+      {
+        "analytic": "contextualDeviation",
+        "metric": "netuitive.winsrv.memory.utilizationpercent",
+        "operator": ">"
+      },
+      {
+        "analytic": "actual",
+        "level": 50,
+        "metric": "netuitive.winsrv.memory.utilizationpercent",
+        "operator": ">="
+      }
+    ],
+    "deleted": false,
+    "description": "This policy will generate a WARNING event when memory utilization on the Windows server is higher than expected.",
+    "duration": 600,
+    "enabled": true,
+    "name": "Windows - Elevated Memory Utilization",
+    "scope": {
+      "elementTypes": [
+        "WINSRV"
+      ]
+    }
   }
 }
