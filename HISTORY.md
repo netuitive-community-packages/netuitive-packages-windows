@@ -1,9 +1,5 @@
 ## Release History
 
-### Version next
-
-### Version 2.1.0
-
 * Add a memory utilization floor to the Elevated Memory policy
 
 ### Version 2.1.0
